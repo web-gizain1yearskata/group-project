@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Школа Новини</title>
+    <style>
+       body {
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #093456;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffffffd9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;
+    width: auto; 
+}
+
+nav .menu {
+    display: flex;
+    justify-content: flex-end; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav .menu li a {
+    color: black;        
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+nav .menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff9800;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s, left 0.3s;
+}
+
+nav .menu li a:hover {
+    color: #ff9800;
+}
+
+nav .menu li a:hover::after {
+    width: calc(100% - 20px);
+    left: 10px;
+}
+
+.container {
+    width: 95%;
+    margin: 50px 10px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item p {
+    color: #494545;
+}
+
+.news {
+    flex: 3;
+}
+
+.news-item {
+    background: #edebebf7;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #b37831;
+    display: inline-block;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.news-item p {
+    line-height: 1.6;
+}
+.sidebar {
+    max-height: 100%;
+    float: right;
+    flex: 1;
+    background: #181818;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Додатково, щоб зробити текст в області прокрутки */
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.sidebar h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff9800;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar h3:hover::after {
+    transform: scaleX(1);
+}
+
+.sidebar p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.sidebar a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff9800;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar a:hover::after {
+    transform: scaleX(1);
+}
+
+
+footer {
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+.call-us {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 9999;
+}
+
+.call-us:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+.call-us svg {
+    width: 24px;
+    height: 24px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Логотип IT Школа" class="logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="idex.html">Головна</a></li>
+                <li><a href="#">Курс</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="#">Довідник</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="news">
+                <div class="news-item">
+                    <h2>Новий Курс: Веб-Розробка для Початківців</h2>
+                    <p>Наша школа запускає новий курс з веб-розробки, який розпочнеться з 1 липня. Курс призначений для початківців і охоплює основи HTML, CSS та JavaScript.</p>
+                </div>
+                <div class="news-item">
+                    <h2>Вебінар: Як Стати Frontend розробником </h2>
+                    <p>Приєднуйтесь до нашого безкоштовного вебінару 15 червня о 19:00, де експерти розкажуть про перші кроки у світі Frontend розробники.</p>
+                </div>
+                <div class="news-item">
+                    <h2>Оновлення Лабораторій</h2>
+                    <p>Ми оновили наші лабораторії новим обладнанням! Тепер наші студенти можуть працювати з найновішими технологіями та інструментами.</p>
+                </div>
+            </div>
+            <div class="sidebar">
+                <h3>Інші новини</h3>
+                <p>Набір на курс з програмування на Python відкрито!</p>
+                <p>Випускний вечір пройде 30 червня.</p>
+                <p>Відкриття нового кампусу в Києві.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 IT Global. Всі права захищені.</p>
+    </footer>
+    <button class="call-us" onclick="window.location.href='tel:+1234567890'">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79a15.072 15.072 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.12.45 2.33.69 3.57.69a1 1 0 011 1v3.5a1 1 0 01-1 1c-8.27 0-15-6.73-15-15a1 1 0 011-1H7a1 1 0 011 1c0 1.24.24 2.45.69 3.57.16.38.07.82-.21 1.11l-2.2 2.2z"/>
+        </svg>
+    </button>
+</body>
+</html>
+
